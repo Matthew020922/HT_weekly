@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2024年我国数字产业业务收入35万亿元，新动能持续积聚 - 华泰证券AI行业周报</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <style>
+        .industry-detail {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .industry-header {
+            margin-bottom: 30px;
+            border-bottom: 1px solid var(--card-border);
+            padding-bottom: 20px;
+        }
+        
+        .industry-tag {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            background-color: var(--tag-domestic);
+            color: white;
+            margin-bottom: 15px;
+        }
+        
+        .industry-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--text-color);
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+        
+        .industry-meta {
+            display: flex;
+            align-items: center;
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 10px;
+        }
+        
+        .industry-meta .source {
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+        }
+        
+        .industry-meta i {
+            margin-right: 5px;
+        }
+        
+        .industry-content {
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+        
+        .industry-content p, .industry-content ul {
+            margin-bottom: 20px;
+        }
+        
+        .industry-content h2 {
+            font-size: 1.4rem;
+            margin: 30px 0 15px;
+            color: var(--primary-color);
+        }
+        
+        .industry-content h3 {
+            font-size: 1.2rem;
+            margin: 25px 0 15px;
+        }
+        
+        .industry-source {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--card-border);
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+        
+        .data-card {
+            background-color: var(--bg-lighter);
+            border-radius: var(--border-radius);
+            padding: 20px;
+            margin-bottom: 20px;
+            border-left: 4px solid var(--primary-color);
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .data-card h3 {
+            display: flex;
+            align-items: center;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+        
+        .data-card h3 i {
+            margin-right: 10px;
+        }
+        
+        .data-highlight {
+            display: flex;
+            justify-content: space-around;
+            margin: 15px 0;
+            flex-wrap: wrap;
+        }
+        
+        .data-item {
+            text-align: center;
+            padding: 15px;
+            min-width: 150px;
+        }
+        
+        .data-value {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+        
+        .data-label {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+        
+        .progress-section {
+            margin: 30px 0;
+        }
+        
+        .progress-item {
+            margin-bottom: 20px;
+        }
+        
+        .progress-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+        
+        .progress-title {
+            font-weight: 500;
+        }
+        
+        .progress-value {
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+        
+        .progress-bar {
+            height: 8px;
+            background-color: var(--bg-light);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(to right, var(--primary-color), var(--primary-color-light));
+            border-radius: 4px;
+        }
+        
+        .industry-actions {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid var(--card-border);
+        }
+        
+        .industry-actions a {
+            display: flex;
+            align-items: center;
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+        
+        .industry-actions a i {
+            margin: 0 5px;
+        }
+        
+        .related-news {
+            margin-top: 50px;
+        }
+        
+        .related-news h2 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: var(--text-color);
+        }
+        
+        .related-card {
+            padding: 20px;
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-sm);
+            margin-bottom: 15px;
+            transition: var(--transition);
+        }
+        
+        .related-card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+        }
+        
+        .related-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .industry-detail {
+                padding: 20px;
+                margin: 20px;
+            }
+            
+            .industry-title {
+                font-size: 1.7rem;
+            }
+            
+            .data-highlight {
+                flex-direction: column;
+            }
+            
+            .data-item {
+                margin-bottom: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <div class="logo">
+                    <h1>华泰证券 AI行业周报</h1>
+                    <p class="tagline">洞察AI趋势 · 把握未来投资机遇</p>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="index.html#regulatory">监管政策</a></li>
+                        <li><a href="index.html#industry" class="active">行业动态</a></li>
+                        <li><a href="index.html#capital">资本市场</a></li>
+                        <li><a href="index.html#insights">洞见报告</a></li>
+                        <li><a href="index.html#ai-assistant">问一问</a></li>
+                        <li><a href="index.html#archive">历史周报</a></li>
+                    </ul>
+                </nav>
+                <div class="search-subscribe">
+                    <div class="search">
+                        <i class="ri-search-line"></i>
+                        <input type="text" placeholder="搜索行业关键词...">
+                    </div>
+                    <button class="subscribe-btn">订阅周报</button>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="industry-detail">
+                <div class="industry-header">
+                    <div class="industry-tag">国内</div>
+                    <h1 class="industry-title">2024年我国数字产业业务收入35万亿元，新动能持续积聚</h1>
+                    <div class="industry-meta">
+                        <span class="source"><i class="ri-links-line"></i> 工业和信息化部</span>
+                        <span class="industry-category"><i class="ri-global-line"></i> 数字经济</span>
+                    </div>
+                </div>
+                
+                <div class="industry-content">
+                    <p>3月17日，工业和信息化部运行监测协调局发布数据称，2024年，我国数字产业总体运行平稳，业务收入稳步提升。2024年数字产业完成业务收入35万亿元，同比增长5.5%；实现利润总额2.7万亿元，同比增长3.5%。</p>
+                    
+                    <div class="data-card">
+                        <h3><i class="ri-line-chart-line"></i> 数字产业核心数据</h3>
+                        <div class="data-highlight">
+                            <div class="data-item">
+                                <div class="data-value">35万亿</div>
+                                <div class="data-label">业务收入</div>
+                            </div>
+                            <div class="data-item">
+                                <div class="data-value">5.5%</div>
+                                <div class="data-label">同比增长</div>
+                            </div>
+                            <div class="data-item">
+                                <div class="data-value">2.7万亿</div>
+                                <div class="data-label">利润总额</div>
+                            </div>
+                            <div class="data-item">
+                                <div class="data-value">3.5%</div>
+                                <div class="data-label">利润增长</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <p>数字产业集聚态势明显。2024年，数字产业重点监测的核心指标中九成以上实现同比提升。</p>
+                    
+                    <h2>产业发展亮点</h2>
+                    
+                    <div class="data-card">
+                        <h3><i class="ri-computer-line"></i> 电子信息制造业全面回升</h3>
+                        <p>规模以上计算机、通信和其他电子设备制造业增加值增长11.8%，较上年提高8.4个百分点。消费电子市场全面回暖，拉动我国手机、微型计算机和彩电产量同比增长7.8%、2.7%和4.6%。</p>
+                        
+                        <div class="progress-section">
+                            <div class="progress-item">
+                                <div class="progress-header">
+                                    <span class="progress-title">手机产量增长</span>
+                                    <span class="progress-value">7.8%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 78%;"></div>
+                                </div>
+                            </div>
+                            <div class="progress-item">
+                                <div class="progress-header">
+                                    <span class="progress-title">微型计算机产量增长</span>
+                                    <span class="progress-value">2.7%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 27%;"></div>
+                                </div>
+                            </div>
+                            <div class="progress-item">
+                                <div class="progress-header">
+                                    <span class="progress-title">彩电产量增长</span>
+                                    <span class="progress-value">4.6%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 46%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="data-card">
+                        <h3><i class="ri-code-s-slash-line"></i> 软件业务持续增长</h3>
+                        <p>在人工智能、云平台等新兴业务拉动下，软件业完成业务收入13.7万亿元，同比增长10%。</p>
+                    </div>
+                    
+                    <div class="data-card">
+                        <h3><i class="ri-base-station-line"></i> 通信业稳步发展</h3>
+                        <p>通信业完成业务收入1.74万亿元，同比增长3.2%。</p>
+                    </div>
+                    
+                    <h2>数字基础设施量质齐升</h2>
+                    
+                    <p>截至2024年末，全国光缆线路总长度达7288万公里，累计建成5G基站425.1万个，具备千兆服务能力的10G PON端口达2820万个，建成千兆城市207个，实现县县通千兆、乡乡通5G，90%以上行政村实现5G网络覆盖。</p>
+                    
+                    <p>全国在用算力中心标准机架数超过880万架，算力总规模较上年末增长16.5%。</p>
+                    
+                    <p>新型融合基础设施加速覆盖，累计建成5G虚拟专网5.5万个，广泛覆盖工业、港口、能源等重点应用场景；建成工业互联网标识解析二级节点381个，接入企业50.6万家；移动物联网终端达26.6亿户，加快向"万物智联"发展。</p>
+                    
+                    <h2>产业生态体系持续完善</h2>
+                    
+                    <p>开源鸿蒙搭载设备数量超过10亿台，开源欧拉用户数量超过380万，为全球150余个国家和地区提供服务。同时，产业新动能持续增强。人工智能、人形机器人等新兴领域保持较高投融资热度，为产业发展持续注入活力。</p>
+                    
+                    <h2>人工智能加速融合应用</h2>
+                    
+                    <p>人工智能技术创新取得积极进展，大模型商业化发展加速，人工智能在金融政务、服务医疗、生产制造等领域加快融合应用，助力企业提质增效。"人工智能+智能硬件"开启新一轮消费空间，AI手机出货量占比快速提升。</p>
+                    
+                    <p>据IDC预测，2025年中国AI手机市场出货量将达1.18亿台，同比增长59.8%，整体市场占比40.7%。</p>
+                </div>
+                
+                <div class="industry-source">
+                    <p>资料来源：工业和信息化部运行监测协调局、IDC</p>
+                </div>
+                
+                <div class="industry-actions">
+                    <a href="industry_detail_1.html"><i class="ri-arrow-left-line"></i>上一篇</a>
+                    <a href="#">下一篇<i class="ri-arrow-right-line"></i></a>
+                </div>
+            </div>
+            
+            <div class="related-news">
+                <h2>相关动态</h2>
+                <div class="content-grid">
+                    <div class="related-card">
+                        <h3>工信部：加快推进数字经济与实体经济深度融合</h3>
+                        <a href="#" class="card-link">详情</a>
+                    </div>
+                    <div class="related-card">
+                        <h3>2024年我国AI产业规模将突破5000亿元</h3>
+                        <a href="#" class="card-link">详情</a>
+                    </div>
+                    <div class="related-card">
+                        <h3>数字经济成为中国经济增长新引擎</h3>
+                        <a href="#" class="card-link">详情</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>关于我们</h3>
+                    <p>华泰证券股份有限公司创建于1991年，是国内规模领先的综合性证券集团。公司致力于成为兼具本土优势和全球视野的一流综合金融集团。</p>
+                    <div class="social-links">
+                        <a href="#"><i class="ri-wechat-line"></i></a>
+                        <a href="#"><i class="ri-weibo-line"></i></a>
+                        <a href="#"><i class="ri-linkedin-box-line"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>研究团队</h3>
+                    <ul>
+                        <li><a href="#">研究团队介绍</a></li>
+                        <li><a href="#">分析师观点</a></li>
+                        <li><a href="#">研究方法论</a></li>
+                        <li><a href="#">联系分析师</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>快速链接</h3>
+                    <ul>
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="index.html#regulatory">监管政策</a></li>
+                        <li><a href="index.html#industry">行业动态</a></li>
+                        <li><a href="index.html#capital">资本市场</a></li>
+                        <li><a href="index.html#archive">历史周报</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>联系我们</h3>
+                    <ul>
+                        <li>客服热线: 95597</li>
+                        <li>邮箱: research@htsc.com</li>
+                        <li>地址: 江苏省南京市江东中路228号</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 华泰证券股份有限公司 版权所有</p>
+                <p>苏ICP备10204514号-1</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

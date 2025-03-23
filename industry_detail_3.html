@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>全国工商联将建立"民营企业金融服务监测平台" - 华泰证券AI行业周报</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <style>
+        .industry-detail {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .industry-header {
+            margin-bottom: 30px;
+            border-bottom: 1px solid var(--card-border);
+            padding-bottom: 20px;
+        }
+        
+        .industry-tag {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            background-color: var(--tag-domestic);
+            color: white;
+            margin-bottom: 15px;
+        }
+        
+        .industry-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--text-color);
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+        
+        .industry-meta {
+            display: flex;
+            align-items: center;
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 10px;
+        }
+        
+        .industry-meta .source {
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+        }
+        
+        .industry-meta i {
+            margin-right: 5px;
+        }
+        
+        .industry-content {
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+        
+        .industry-content p, .industry-content ul {
+            margin-bottom: 20px;
+        }
+        
+        .industry-content h2 {
+            font-size: 1.4rem;
+            margin: 30px 0 15px;
+            color: var(--primary-color);
+        }
+        
+        .industry-content h3 {
+            font-size: 1.2rem;
+            margin: 25px 0 15px;
+        }
+        
+        .industry-source {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--card-border);
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+        
+        .initiative-card {
+            background-color: var(--bg-lighter);
+            border-radius: var(--border-radius);
+            padding: 20px;
+            margin-bottom: 20px;
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .initiative-card h3 {
+            display: flex;
+            align-items: center;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+        
+        .initiative-card h3 i {
+            margin-right: 10px;
+        }
+        
+        .initiative-card ul {
+            padding-left: 20px;
+        }
+        
+        .initiative-card li {
+            margin-bottom: 10px;
+        }
+        
+        .cooperation-box {
+            display: flex;
+            justify-content: space-between;
+            margin: 30px 0;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .cooperation-item {
+            flex: 1;
+            min-width: 250px;
+            background-color: var(--bg-lighter);
+            border-radius: var(--border-radius);
+            padding: 20px;
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .cooperation-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .cooperation-item h3 {
+            display: flex;
+            align-items: center;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+        
+        .cooperation-item h3 i {
+            margin-right: 10px;
+            font-size: 1.3rem;
+        }
+        
+        .industry-actions {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid var(--card-border);
+        }
+        
+        .industry-actions a {
+            display: flex;
+            align-items: center;
+            color: var(--primary-color);
+            font-weight: 500;
+            transition: transform 0.2s ease;
+        }
+        
+        .industry-actions a:hover {
+            transform: translateX(3px);
+        }
+        
+        .industry-actions a i {
+            margin: 0 5px;
+        }
+        
+        .related-news {
+            margin-top: 50px;
+        }
+        
+        .related-news h2 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: var(--text-color);
+        }
+        
+        .related-card {
+            padding: 20px;
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-sm);
+            margin-bottom: 15px;
+            transition: var(--transition);
+        }
+        
+        .related-card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+        }
+        
+        .related-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .industry-detail {
+                padding: 20px;
+                margin: 20px;
+            }
+            
+            .industry-title {
+                font-size: 1.7rem;
+            }
+            
+            .cooperation-box {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <div class="logo">
+                    <h1>华泰证券 AI行业周报</h1>
+                    <p class="tagline">洞察AI趋势 · 把握未来投资机遇</p>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="index.html#regulatory">监管政策</a></li>
+                        <li><a href="index.html#industry" class="active">行业动态</a></li>
+                        <li><a href="index.html#capital">资本市场</a></li>
+                        <li><a href="index.html#insights">洞见报告</a></li>
+                        <li><a href="index.html#ai-assistant">问一问</a></li>
+                        <li><a href="index.html#archive">历史周报</a></li>
+                    </ul>
+                </nav>
+                <div class="search-subscribe">
+                    <div class="search">
+                        <i class="ri-search-line"></i>
+                        <input type="text" placeholder="搜索行业关键词...">
+                    </div>
+                    <button class="subscribe-btn">订阅周报</button>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="industry-detail">
+                <div class="industry-header">
+                    <div class="industry-tag">国内</div>
+                    <h1 class="industry-title">全国工商联将建立"民营企业金融服务监测平台"</h1>
+                    <div class="industry-meta">
+                        <span class="source"><i class="ri-links-line"></i> 中国银行业协会</span>
+                        <span class="industry-category"><i class="ri-bank-line"></i> 金融服务</span>
+                    </div>
+                </div>
+                
+                <div class="industry-content">
+                    <p>3月17日，中国银行业协会与中华全国工商业联合会在北京联合发布《银行业金融机构支持民营经济高质量发展倡议书》，号召银行业金融机构从六大维度深化金融服务，为民营经济健康发展注入强劲动能。</p>
+                    
+                    <div class="initiative-card">
+                        <h3><i class="ri-file-list-3-line"></i> 倡议书六大维度</h3>
+                        <ul>
+                            <li><strong>优化服务体系</strong>：完善民营企业金融服务体系</li>
+                            <li><strong>创新金融产品</strong>：加大产品和服务创新力度</li>
+                            <li><strong>提升服务效率</strong>：优化业务流程，提高服务效率</li>
+                            <li><strong>降低融资成本</strong>：合理定价，降低民营企业综合融资成本</li>
+                            <li><strong>加强风险管理</strong>：完善风险管理机制，提高风险识别和处置能力</li>
+                            <li><strong>强化内部考核</strong>：优化内部考核激励机制，引导资源向民营企业倾斜</li>
+                        </ul>
+                    </div>
+                    
+                    <h2>监测评价机制</h2>
+                    
+                    <p>据悉，全国工商联将建立"民营企业金融服务监测平台"，按季发布银行业服务民营企业发展指数。中国银行业协会将开展"金融服务民营经济示范机构"评选，对表现突出的银行给予专项表彰。</p>
+                    
+                    <div class="cooperation-box">
+                        <div class="cooperation-item">
+                            <h3><i class="ri-bar-chart-box-line"></i> 监测平台</h3>
+                            <p>全国工商联将建立"民营企业金融服务监测平台"，定期收集民营企业金融服务数据，按季度发布银行业服务民营企业发展指数，为政策制定提供数据支持。</p>
+                        </div>
+                        <div class="cooperation-item">
+                            <h3><i class="ri-award-line"></i> 示范评选</h3>
+                            <p>中国银行业协会将开展"金融服务民营经济示范机构"评选活动，对在服务民营经济方面表现突出的银行业金融机构给予专项表彰。</p>
+                        </div>
+                    </div>
+                    
+                    <h2>联动机制建设</h2>
+                    
+                    <p>两地政府部门已建立联席会议制度，重点推动解决民营企业融资中的难点堵点问题。这一机制将促进银行与民营企业之间的沟通，提高金融服务的针对性和有效性。</p>
+                    
+                    <p>联席会议将定期召开，邀请银行业金融机构、民营企业代表、监管部门和相关专家参与，共同研究解决民营企业融资过程中遇到的实际问题，形成长效工作机制。</p>
+                    
+                    <h2>意义与展望</h2>
+                    
+                    <p>此次倡议的发布和监测平台的建立，标志着我国支持民营经济发展的金融服务体系进一步完善。通过建立客观、公正的评价体系，将有效引导银行业金融机构提升服务民营企业的质效，促进民营经济高质量发展。</p>
+                    
+                    <p>专家表示，这一举措将有助于解决民营企业"融资难、融资贵"问题，优化民营企业金融服务环境，为民营经济发展注入新动能，对促进国民经济稳定增长具有重要意义。</p>
+                </div>
+                
+                <div class="industry-source">
+                    <p>资料来源：中国银行业协会、中华全国工商业联合会</p>
+                </div>
+                
+                <div class="industry-actions">
+                    <a href="industry_detail_2.html"><i class="ri-arrow-left-line"></i>上一篇</a>
+                    <a href="industry_detail_4.html">下一篇<i class="ri-arrow-right-line"></i></a>
+                </div>
+            </div>
+            
+            <div class="related-news">
+                <h2>相关动态</h2>
+                <div class="content-grid">
+                    <div class="related-card">
+                        <h3>央行：持续优化民营企业金融服务</h3>
+                        <a href="#" class="card-link">详情</a>
+                    </div>
+                    <div class="related-card">
+                        <h3>银保监会：引导银行加大对民营企业信贷支持</h3>
+                        <a href="#" class="card-link">详情</a>
+                    </div>
+                    <div class="related-card">
+                        <h3>工信部：推动中小微企业数字化转型</h3>
+                        <a href="#" class="card-link">详情</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>关于我们</h3>
+                    <p>华泰证券股份有限公司创建于1991年，是国内规模领先的综合性证券集团。公司致力于成为兼具本土优势和全球视野的一流综合金融集团。</p>
+                    <div class="social-links">
+                        <a href="#"><i class="ri-wechat-line"></i></a>
+                        <a href="#"><i class="ri-weibo-line"></i></a>
+                        <a href="#"><i class="ri-linkedin-box-line"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>研究团队</h3>
+                    <ul>
+                        <li><a href="#">研究团队介绍</a></li>
+                        <li><a href="#">分析师观点</a></li>
+                        <li><a href="#">研究方法论</a></li>
+                        <li><a href="#">联系分析师</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>快速链接</h3>
+                    <ul>
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="index.html#regulatory">监管政策</a></li>
+                        <li><a href="index.html#industry">行业动态</a></li>
+                        <li><a href="index.html#capital">资本市场</a></li>
+                        <li><a href="index.html#archive">历史周报</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>联系我们</h3>
+                    <ul>
+                        <li>客服热线: 95597</li>
+                        <li>邮箱: research@htsc.com</li>
+                        <li>地址: 江苏省南京市江东中路228号</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 华泰证券股份有限公司 版权所有</p>
+                <p>苏ICP备10204514号-1</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 

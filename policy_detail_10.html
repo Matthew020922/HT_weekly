@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>上海浦东：将聚焦人形机器人、大模型等赛道打造特色园区地标 - 华泰证券AI行业周报</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <style>
+        .policy-detail {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .policy-header {
+            margin-bottom: 30px;
+            border-bottom: 1px solid var(--card-border);
+            padding-bottom: 20px;
+        }
+        
+        .policy-tag {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            background-color: var(--tag-domestic);
+            color: white;
+            margin-bottom: 15px;
+        }
+        
+        .policy-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--text-color);
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+        
+        .policy-meta {
+            display: flex;
+            align-items: center;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+        
+        .policy-meta .source {
+            display: flex;
+            align-items: center;
+        }
+        
+        .policy-meta i {
+            margin-right: 5px;
+        }
+        
+        .policy-content {
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+        
+        .policy-content p, .policy-content ul {
+            margin-bottom: 20px;
+        }
+        
+        .policy-content h2 {
+            font-size: 1.4rem;
+            margin: 30px 0 15px;
+            color: var(--primary-color);
+        }
+        
+        .policy-content h3 {
+            font-size: 1.2rem;
+            margin: 25px 0 15px;
+        }
+        
+        .policy-source {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--card-border);
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+        
+        .policy-actions {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid var(--card-border);
+        }
+        
+        .policy-actions a {
+            display: flex;
+            align-items: center;
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+        
+        .policy-actions a i {
+            margin: 0 5px;
+        }
+        
+        .related-policies {
+            margin-top: 50px;
+        }
+        
+        .related-policies h2 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: var(--text-color);
+        }
+        
+        .related-card {
+            padding: 20px;
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-sm);
+            margin-bottom: 15px;
+            transition: var(--transition);
+        }
+        
+        .related-card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+        }
+        
+        .related-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+        
+        .support-card {
+            background-color: var(--bg-lighter);
+            border-radius: var(--border-radius);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .support-card h3 {
+            display: flex;
+            align-items: center;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+        
+        .support-card h3 i {
+            margin-right: 10px;
+        }
+        
+        .support-card ul {
+            padding-left: 20px;
+        }
+        
+        .info-box {
+            background-color: var(--bg-lighter);
+            border-left: 4px solid var(--primary-color);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+        }
+        
+        .info-box h3 {
+            margin-top: 0;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+        
+        .progress-steps {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 30px 0;
+            position: relative;
+        }
+        
+        .progress-steps::before {
+            content: "";
+            position: absolute;
+            top: 25px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background-color: var(--card-border);
+            z-index: 1;
+        }
+        
+        .step {
+            flex: 1;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            padding: 0 10px;
+        }
+        
+        .step-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 10px;
+            font-size: 1.3rem;
+        }
+        
+        .step-title {
+            font-weight: 600;
+            margin-bottom: 5px;
+            font-size: 1rem;
+        }
+        
+        .step-desc {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+        
+        @media (max-width: 768px) {
+            .policy-detail {
+                padding: 20px;
+                margin: 20px;
+            }
+            
+            .policy-title {
+                font-size: 1.7rem;
+            }
+            
+            .progress-steps {
+                flex-direction: column;
+            }
+            
+            .progress-steps::before {
+                display: none;
+            }
+            
+            .step {
+                margin-bottom: 20px;
+                display: flex;
+                align-items: center;
+                text-align: left;
+            }
+            
+            .step-icon {
+                margin: 0 15px 0 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <div class="logo">
+                    <h1>华泰证券 AI行业周报</h1>
+                    <p class="tagline">洞察AI趋势 · 把握未来投资机遇</p>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="index.html#regulatory" class="active">监管政策</a></li>
+                        <li><a href="index.html#industry">行业动态</a></li>
+                        <li><a href="index.html#capital">资本市场</a></li>
+                        <li><a href="index.html#insights">洞见报告</a></li>
+                        <li><a href="index.html#ai-assistant">问一问</a></li>
+                        <li><a href="index.html#archive">历史周报</a></li>
+                    </ul>
+                </nav>
+                <div class="search-subscribe">
+                    <div class="search">
+                        <i class="ri-search-line"></i>
+                        <input type="text" placeholder="搜索行业关键词...">
+                    </div>
+                    <button class="subscribe-btn">订阅周报</button>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="policy-detail">
+                <div class="policy-header">
+                    <div class="policy-tag">国内</div>
+                    <h1 class="policy-title">上海浦东：将聚焦人形机器人、大模型等赛道打造特色园区地标</h1>
+                    <div class="policy-meta">
+                        <span class="source"><i class="ri-links-line"></i> 上海市浦东新区人民政府</span>
+                    </div>
+                </div>
+                
+                <div class="policy-content">
+                    <p>浦东新区副区长李慧表示，浦东将问需于企，强化全方面的要素支撑。将聚焦人形机器人、大模型、生物制造等赛道，集中力量打造一批特色园区地标。</p>
+                    
+                    <div class="info-box">
+                        <h3>政策要点</h3>
+                        <ul>
+                            <li>聚焦人形机器人、大模型、生物制造等赛道</li>
+                            <li>打造一批特色园区地标</li>
+                            <li>深化产业用地弹性规划和功能复合</li>
+                            <li>持续加大"工业上楼"力度</li>
+                            <li>面向全球深化"明珠计划"引进各类人才</li>
+                            <li>2025年产业投资预计超150亿元</li>
+                        </ul>
+                    </div>
+                    
+                    <h2>政策背景</h2>
+                    <p>上海浦东作为中国改革开放的前沿阵地和重要窗口，一直在科技创新和产业发展方面走在全国前列。面对人工智能、生物制造等新兴技术领域的快速发展，浦东新区积极谋划，通过深化产业空间布局、人才引进和资金支持等多方面举措，推动区域经济高质量发展。</p>
+                    
+                    <h2>主要支持措施</h2>
+                    <div class="highlights-grid">
+                        <div class="highlight-card">
+                            <div class="highlight-icon">
+                                <i class="ri-building-4-line"></i>
+                            </div>
+                            <h3>特色园区地标</h3>
+                            <p>聚焦人形机器人、大模型、生物制造等赛道，集中力量打造一批特色园区地标</p>
+                        </div>
+                        <div class="highlight-card">
+                            <div class="highlight-icon">
+                                <i class="ri-layout-grid-line"></i>
+                            </div>
+                            <h3>产业空间优化</h3>
+                            <p>深化产业用地弹性规划和功能复合，持续加大"工业上楼"力度，最大程度释放产业空间</p>
+                        </div>
+                        <div class="highlight-card">
+                            <div class="highlight-icon">
+                                <i class="ri-user-star-line"></i>
+                            </div>
+                            <h3>全球人才引进</h3>
+                            <p>面向全球深化"明珠计划"，更大力度引进各类人才</p>
+                        </div>
+                        <div class="highlight-card">
+                            <div class="highlight-icon">
+                                <i class="ri-home-4-line"></i>
+                            </div>
+                            <h3>人才安居配套</h3>
+                            <p>配套出台团队建设、科研攻坚、创业投融资、安居配套等一揽子激励措施</p>
+                        </div>
+                        <div class="highlight-card">
+                            <div class="highlight-icon">
+                                <i class="ri-bank-line"></i>
+                            </div>
+                            <h3>科技金融服务</h3>
+                            <p>完善全生命周期多元化、接力式科技金融服务体系</p>
+                        </div>
+                        <div class="highlight-card">
+                            <div class="highlight-icon">
+                                <i class="ri-funds-line"></i>
+                            </div>
+                            <h3>产业投资</h3>
+                            <p>发挥国资创投引导作用，带动更多社会资本参与浦东发展，2025年产业投资预计超150亿元</p>
+                        </div>
+                    </div>
+                    
+                    <h2>聚焦重点赛道</h2>
+                    <p>浦东新区重点聚焦以下几个战略性新兴产业赛道，以打造具有国际竞争力的产业集群：</p>
+                    <ul>
+                        <li><strong>人形机器人</strong>：支持人形机器人核心技术研发、关键零部件国产化和应用场景拓展</li>
+                        <li><strong>大模型</strong>：推动大模型技术迭代和行业应用，建设大模型算力基础设施</li>
+                        <li><strong>生物制造</strong>：加速生物制造技术产业化，构建生物制造产业生态</li>
+                    </ul>
+                    
+                    <h2>"工业上楼"计划</h2>
+                    <p>为最大程度释放产业空间，浦东新区将持续推进"工业上楼"策略：</p>
+                    <ul>
+                        <li>深化产业用地弹性规划和功能复合</li>
+                        <li>鼓励多层工业建筑和垂直产业园区建设</li>
+                        <li>支持存量工业用地改造提升和空间集约利用</li>
+                        <li>优化产业空间布局，提高土地利用效率</li>
+                    </ul>
+                    
+                    <h2>"明珠计划"人才引进</h2>
+                    <p>浦东新区将面向全球深化"明珠计划"，加大人才引进力度：</p>
+                    <ul>
+                        <li><strong>团队建设</strong>：支持顶尖科研团队和创业团队落户浦东</li>
+                        <li><strong>科研攻坚</strong>：设立重点领域科研攻关专项资金</li>
+                        <li><strong>创业投融资</strong>：提供创业初期资金支持和融资对接</li>
+                        <li><strong>安居配套</strong>：为高层次人才提供住房补贴和专项安居工程</li>
+                    </ul>
+                    
+                    <h2>科技金融服务体系</h2>
+                    <p>浦东新区将完善科技企业全生命周期的金融服务体系：</p>
+                    <ul>
+                        <li>构建多元化、接力式科技金融服务模式</li>
+                        <li>发挥国资创投引导作用，带动社会资本参与</li>
+                        <li>支持科技企业上市和融资</li>
+                        <li>设立产业发展基金，促进科技成果转化</li>
+                    </ul>
+                    
+                    <h2>预期投资规模</h2>
+                    <p>据李慧副区长介绍，浦东新区通过国资创投引导带动社会资本参与，2025年产业投资预计将超过150亿元，重点投向战略性新兴产业和未来产业领域。</p>
+                    
+                    <h2>实施路径</h2>
+                    <p>浦东新区将坚持"问需于企"的原则，通过以下途径落实各项支持政策：</p>
+                    <ul>
+                        <li>建立企业需求对接机制，及时响应企业发展诉求</li>
+                        <li>简化行政审批流程，提高政府服务效率</li>
+                        <li>搭建产学研协同创新平台，促进技术成果转化</li>
+                        <li>完善产业生态系统，提供全方位发展支撑</li>
+                    </ul>
+                </div>
+                
+                <div class="policy-source">
+                    <p>资料来源：上海市浦东新区人民政府</p>
+                </div>
+                
+                <div class="policy-actions">
+                    <a href="policy_detail_9.html"><i class="ri-arrow-left-line"></i>上一篇：国家网信办促进数据跨境流动国际合作</a>
+                    <a href="policy_detail_11.html">下一篇：央行安全稳妥有序推进人工智能大模型在金融领域应用<i class="ri-arrow-right-line"></i></a>
+                </div>
+            </div>
+            
+            <div class="related-policies">
+                <h2>相关政策</h2>
+                <div class="content-grid">
+                    <div class="related-card">
+                        <h3>国家网信办：促进数据跨境流动国际合作</h3>
+                        <a href="policy_detail_9.html" class="card-link">详情</a>
+                    </div>
+                    <div class="related-card">
+                        <h3>珠海：创建人工智能产业创新示范区</h3>
+                        <a href="policy_detail_8.html" class="card-link">详情</a>
+                    </div>
+                    <div class="related-card">
+                        <h3>成都：建设国家新一代人工智能创新发展试验区</h3>
+                        <a href="policy_detail_7.html" class="card-link">详情</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>关于我们</h3>
+                    <p>华泰证券股份有限公司创建于1991年，是国内规模领先的综合性证券集团。公司致力于成为兼具本土优势和全球视野的一流综合金融集团。</p>
+                    <div class="social-links">
+                        <a href="#"><i class="ri-wechat-line"></i></a>
+                        <a href="#"><i class="ri-weibo-line"></i></a>
+                        <a href="#"><i class="ri-linkedin-box-line"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>研究团队</h3>
+                    <ul>
+                        <li><a href="#">研究团队介绍</a></li>
+                        <li><a href="#">分析师观点</a></li>
+                        <li><a href="#">研究方法论</a></li>
+                        <li><a href="#">联系分析师</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>快速链接</h3>
+                    <ul>
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="index.html#regulatory">监管政策</a></li>
+                        <li><a href="index.html#industry">行业动态</a></li>
+                        <li><a href="index.html#capital">资本市场</a></li>
+                        <li><a href="index.html#archive">历史周报</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>联系我们</h3>
+                    <ul>
+                        <li>客服热线: 95597</li>
+                        <li>邮箱: research@htsc.com</li>
+                        <li>地址: 江苏省南京市江东中路228号</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 华泰证券股份有限公司 版权所有</p>
+                <p>苏ICP备10204514号-1</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 

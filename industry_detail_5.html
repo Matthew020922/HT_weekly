@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中信金融资产运用AI技术赋能不良资产业务 - 华泰证券AI行业周报</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <style>
+        .industry-detail {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .industry-header {
+            margin-bottom: 30px;
+            border-bottom: 1px solid var(--card-border);
+            padding-bottom: 20px;
+        }
+        
+        .industry-tag {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            background-color: var(--tag-domestic);
+            color: white;
+            margin-bottom: 15px;
+        }
+        
+        .industry-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--text-color);
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+        
+        .industry-meta {
+            display: flex;
+            align-items: center;
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 10px;
+        }
+        
+        .industry-meta .source {
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+        }
+        
+        .industry-meta i {
+            margin-right: 5px;
+        }
+        
+        .industry-content {
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+        
+        .industry-content p, .industry-content ul {
+            margin-bottom: 20px;
+        }
+        
+        .industry-content h2 {
+            font-size: 1.4rem;
+            margin: 30px 0 15px;
+            color: var(--primary-color);
+        }
+        
+        .industry-content h3 {
+            font-size: 1.2rem;
+            margin: 25px 0 15px;
+        }
+        
+        .industry-source {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--card-border);
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+        
+        .tech-card {
+            background-color: var(--bg-lighter);
+            border-radius: var(--border-radius);
+            padding: 20px;
+            margin-bottom: 20px;
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .tech-card h3 {
+            display: flex;
+            align-items: center;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+        
+        .tech-card h3 i {
+            margin-right: 10px;
+        }
+        
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .tech-item {
+            background-color: var(--bg-lighter);
+            border-radius: var(--border-radius);
+            padding: 20px;
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.3s ease;
+        }
+        
+        .tech-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .tech-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        
+        .tech-name {
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        .roadmap {
+            margin: 40px 0;
+            position: relative;
+            padding-left: 30px;
+        }
+        
+        .roadmap::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 10px;
+            width: 3px;
+            background: linear-gradient(to bottom, var(--primary-color), var(--primary-color-light));
+            border-radius: 3px;
+        }
+        
+        .roadmap-item {
+            position: relative;
+            margin-bottom: 30px;
+            padding-left: 30px;
+        }
+        
+        .roadmap-item::before {
+            content: "";
+            position: absolute;
+            left: -30px;
+            top: 8px;
+            width: 20px;
+            height: 20px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+            box-shadow: 0 0 0 4px rgba(var(--primary-color-rgb), 0.2);
+            z-index: 1;
+        }
+        
+        .roadmap-title {
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+        
+        .industry-actions {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid var(--card-border);
+        }
+        
+        .industry-actions a {
+            display: flex;
+            align-items: center;
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+        
+        .industry-actions a i {
+            margin: 0 5px;
+        }
+        
+        .related-news {
+            margin-top: 50px;
+        }
+        
+        .related-news h2 {
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+        
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .related-card {
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 20px;
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.3s ease;
+        }
+        
+        .related-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .related-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+        
+        .related-card .card-link {
+            display: inline-flex;
+            align-items: center;
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+        
+        .related-card .card-link i {
+            margin-left: 5px;
+        }
+        
+        @media (max-width: 768px) {
+            .industry-title {
+                font-size: 1.5rem;
+            }
+            
+            .tech-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <div class="logo">
+                    <h1>华泰证券 AI行业周报</h1>
+                    <p class="tagline">洞察AI趋势 · 把握未来投资机遇</p>
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="index.html#regulatory">监管政策</a></li>
+                        <li><a href="index.html#industry">行业动态</a></li>
+                        <li><a href="index.html#capital">资本市场</a></li>
+                        <li><a href="index.html#archive">历史周报</a></li>
+                    </ul>
+                </nav>
+                <div class="search-subscribe">
+                    <div class="search">
+                        <i class="ri-search-line"></i>
+                        <input type="text" placeholder="搜索行业关键词...">
+                    </div>
+                    <button class="subscribe-btn">订阅周报</button>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="industry-detail">
+                <div class="industry-header">
+                    <div class="industry-tag">国内</div>
+                    <h1 class="industry-title">中信金融资产运用AI技术赋能不良资产业务</h1>
+                    <div class="industry-meta">
+                        <span class="source"><i class="ri-links-line"></i> 中信金融资产</span>
+                        <span class="industry-category"><i class="ri-bank-line"></i> 金融科技</span>
+                    </div>
+                </div>
+                
+                <div class="industry-content">
+                    <p>3月17日，中信金融资产自主研发的新业务核心系统顺利投产。近期，DeepSeek-R1本地化部署进入全面安全评测及实施阶段，为图像处理、自然语言处理、数据整合、逻辑推理等核心技术深度运用到不良资产业务各类应用场景，提供了技术支持和实现路径。</p>
+                    
+                    <div class="tech-card">
+                        <h3><i class="ri-ai-generate"></i> AI核心技术应用</h3>
+                        <p>中信金融资产将DeepSeek-R1大模型应用于不良资产业务，主要涵盖以下核心技术领域：</p>
+                    </div>
+                    
+                    <div class="tech-grid">
+                        <div class="tech-item">
+                            <div class="tech-icon"><i class="ri-image-2-line"></i></div>
+                            <div class="tech-name">图像处理</div>
+                            <p>识别资产图片、抵押物照片，提取关键信息</p>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon"><i class="ri-file-text-line"></i></div>
+                            <div class="tech-name">自然语言处理</div>
+                            <p>分析合同文本、法律文书，提取关键条款</p>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon"><i class="ri-database-2-line"></i></div>
+                            <div class="tech-name">数据整合</div>
+                            <p>整合多源异构数据，构建资产全景视图</p>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon"><i class="ri-brain-line"></i></div>
+                            <div class="tech-name">逻辑推理</div>
+                            <p>分析资产关联关系，辅助风险评估决策</p>
+                        </div>
+                    </div>
+                    
+                    <h2>战略规划与发展路径</h2>
+                    
+                    <p>中信金融资产将牢牢抓住这一轮以科技创新为核心的新旧动能转换机遇，依托中信集团大模型应用底座的协同优势，持续挖掘AI大模型与不良资产主业的更多契合点。</p>
+                    
+                    <div class="roadmap">
+                        <div class="roadmap-item">
+                            <div class="roadmap-title">探索具体应用场景</div>
+                            <p>针对不良资产定价、风险评估、资产处置等关键业务环节，设计AI赋能方案，提升业务效率和准确性。</p>
+                        </div>
+                        <div class="roadmap-item">
+                            <div class="roadmap-title">构建不良资产数据集</div>
+                            <p>基于中信金融资产丰富的业务数据，构建专业的不良资产领域数据集，为模型训练提供高质量数据支持。</p>
+                        </div>
+                        <div class="roadmap-item">
+                            <div class="roadmap-title">训练不良资产领域大模型</div>
+                            <p>基于通用大模型，进行不良资产领域的专业化微调，提升模型在特定场景下的表现。</p>
+                        </div>
+                        <div class="roadmap-item">
+                            <div class="roadmap-title">打造"不良资产智能大脑"</div>
+                            <p>借助科技赋能完成"经验驱动"模式向"数据与算法驱动"模式的转型，构建具有中信金融资产特色的智能决策系统。</p>
+                        </div>
+                    </div>
+                    
+                    <h2>行业意义</h2>
+                    
+                    <p>中信金融资产将AI技术应用于不良资产业务，代表了金融资产管理行业数字化转型的重要趋势。通过AI技术赋能，可以显著提升不良资产处置效率，降低运营成本，提高风险管控能力。</p>
+                    
+                    <p>这一实践为金融资产管理行业提供了可借鉴的经验，展示了AI技术在传统金融领域的创新应用潜力。随着技术的不断成熟和应用场景的深入探索，AI赋能不良资产业务有望成为行业发展的新方向。</p>
+                </div>
+                
+                <div class="industry-source">
+                    <p>资料来源：中信金融资产</p>
+                </div>
+                
+                <div class="industry-actions">
+                    <a href="industry_detail_4.html"><i class="ri-arrow-left-line"></i>上一篇</a>
+                    <a href="index.html#industry"><i class="ri-home-line"></i>返回列表</a>
+                </div>
+            </div>
+            
+            <div class="related-news">
+                <h2>相关动态</h2>
+                <div class="content-grid">
+                    <div class="related-card">
+                        <h3>建设银行推出智能风控平台，提升不良资产处置效率</h3>
+                        <a href="#" class="card-link">详情</a>
+                    </div>
+                    <div class="related-card">
+                        <h3>中国信达与百度智能云达成战略合作，共建AI资产管理平台</h3>
+                        <a href="#" class="card-link">详情</a>
+                    </div>
+                    <div class="related-card">
+                        <h3>银保监会：鼓励金融机构运用科技手段提升不良资产处置效率</h3>
+                        <a href="#" class="card-link">详情</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>关于我们</h3>
+                    <p>华泰证券股份有限公司创建于1991年，是国内规模领先的综合性证券集团。公司致力于成为兼具本土优势和全球视野的一流综合金融集团。</p>
+                    <div class="social-links">
+                        <a href="#"><i class="ri-wechat-line"></i></a>
+                        <a href="#"><i class="ri-weibo-line"></i></a>
+                        <a href="#"><i class="ri-linkedin-box-line"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>研究团队</h3>
+                    <ul>
+                        <li><a href="#">研究团队介绍</a></li>
+                        <li><a href="#">分析师观点</a></li>
+                        <li><a href="#">研究方法论</a></li>
+                        <li><a href="#">联系分析师</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>快速链接</h3>
+                    <ul>
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="index.html#regulatory">监管政策</a></li>
+                        <li><a href="index.html#industry">行业动态</a></li>
+                        <li><a href="index.html#capital">资本市场</a></li>
+                        <li><a href="index.html#archive">历史周报</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>联系我们</h3>
+                    <ul>
+                        <li>客服热线: 95597</li>
+                        <li>邮箱: research@htsc.com</li>
+                        <li>地址: 江苏省南京市江东中路228号</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 华泰证券股份有限公司 版权所有</p>
+                <p>苏ICP备10204514号-1</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

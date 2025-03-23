@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>杭州深度原理科技有限公司完成亿元Pre-A轮融资 - 华泰证券AI行业周报</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <style>
+        .capital-detail {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .capital-header {
+            margin-bottom: 30px;
+            border-bottom: 1px solid var(--card-border);
+            padding-bottom: 20px;
+        }
+        
+        .capital-tag {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            background-color: var(--tag-funding);
+            color: white;
+            margin-bottom: 15px;
+        }
+        
+        .capital-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--text-color);
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+        
+        .capital-meta {
+            display: flex;
+            align-items: center;
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 10px;
+        }
+        
+        .capital-meta i {
+            margin-right: 5px;
+        }
+        
+        .capital-content {
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+        
+        .capital-content p, .capital-content ul {
+            margin-bottom: 20px;
+        }
+        
+        .capital-content h2 {
+            font-size: 1.4rem;
+            margin: 30px 0 15px;
+            color: var(--primary-color);
+        }
+        
+        .capital-content h3 {
+            font-size: 1.2rem;
+            margin: 25px 0 15px;
+        }
+        
+        .capital-source {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--card-border);
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+        
+        .product-card {
+            background-color: var(--bg-lighter);
+            border-radius: var(--border-radius);
+            padding: 20px;
+            margin-bottom: 20px;
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .product-card h3 {
+            display: flex;
+            align-items: center;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+        
+        .product-card h3 i {
+            margin-right: 10px;
+        }
+        
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .spec-item {
+            background-color: var(--bg-lighter);
+            border-radius: var(--border-radius);
+            padding: 20px;
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .spec-value {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin: 10px 0;
+        }
+        
+        .spec-name {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+        
+        .investors-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .investor-card {
+            background-color: var(--bg-lighter);
+            border-radius: var(--border-radius);
+            padding: 15px;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .investor-name {
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: var(--text-color);
+        }
+        
+        .investor-type {
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+        
+        .industry-actions {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid var(--card-border);
+        }
+        
+        .industry-actions a {
+            display: flex;
+            align-items: center;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .industry-actions a i {
+            margin: 0 5px;
+        }
+        
+        .related-news {
+            max-width: 1000px;
+            margin: 40px auto;
+        }
+        
+        .related-news h2 {
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            color: var(--text-color);
+        }
+        
+        .related-card {
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 20px;
+            margin-bottom: 15px;
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .related-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .related-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            color: var(--text-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <div class="logo">
+                    <h1>华泰证券 AI行业周报</h1>
+                    <p class="tagline">洞察AI趋势 · 把握未来投资机遇</p>
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="index.html#regulatory">监管政策</a></li>
+                        <li><a href="index.html#industry">行业动态</a></li>
+                        <li><a href="index.html#capital">资本市场</a></li>
+                        <li><a href="index.html#archive">历史周报</a></li>
+                    </ul>
+                </nav>
+                <div class="search-subscribe">
+                    <div class="search">
+                        <i class="ri-search-line"></i>
+                        <input type="text" placeholder="搜索行业关键词...">
+                    </div>
+                    <button class="subscribe-btn">订阅周报</button>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="capital-detail">
+                <div class="capital-header">
+                    <div class="capital-tag funding">融资事件</div>
+                    <h1 class="capital-title">杭州深度原理科技有限公司完成亿元Pre-A轮融资</h1>
+                    <div class="capital-meta">
+                        <div class="source"><i class="ri-money-dollar-circle-line"></i> Pre-A轮 | 亿元</div>
+                        <div class="keywords"><i class="ri-price-tag-3-line"></i> AI材料科学, 量子化学</div>
+                    </div>
+                </div>
+                
+                <div class="capital-content">
+                    <p>近日，杭州深度原理科技有限公司完成亿元Pre-A轮融资。本轮融资由BV百度风投、启高资本、线性资本、联想之星、联想创投、领软投资、高瓴创投等机构共同投资。</p>
+                    
+                    <p>深度原理成立于2024年，是一家AI for Materials科技创新公司，专注于通过人工智能技术加速材料化学创新。公司将人工智能与量子化学和商业需求相结合，提升化学材料研发创新效率。此前，深度原理已完成种子轮、种子+轮和种子++轮融资。本轮融资将用于加大研发人、团队建设以及市场拓展。</p>
+                    
+                    <h2>融资详情</h2>
+                    
+                    <div class="specs-grid">
+                        <div class="spec-item">
+                            <div class="spec-value">Pre-A轮</div>
+                            <div class="spec-name">融资轮次</div>
+                        </div>
+                        <div class="spec-item">
+                            <div class="spec-value">亿元</div>
+                            <div class="spec-name">融资金额</div>
+                        </div>
+                        <div class="spec-item">
+                            <div class="spec-value">2024年</div>
+                            <div class="spec-name">公司成立时间</div>
+                        </div>
+                    </div>
+                    
+                    <h2>投资方</h2>
+                    
+                    <div class="investors-grid">
+                        <div class="investor-card">
+                            <div class="investor-name">BV百度风投</div>
+                            <div class="investor-type">领投方</div>
+                        </div>
+                        <div class="investor-card">
+                            <div class="investor-name">启高资本</div>
+                            <div class="investor-type">投资方</div>
+                        </div>
+                        <div class="investor-card">
+                            <div class="investor-name">线性资本</div>
+                            <div class="investor-type">投资方</div>
+                        </div>
+                        <div class="investor-card">
+                            <div class="investor-name">联想之星</div>
+                            <div class="investor-type">投资方</div>
+                        </div>
+                        <div class="investor-card">
+                            <div class="investor-name">联想创投</div>
+                            <div class="investor-type">投资方</div>
+                        </div>
+                        <div class="investor-card">
+                            <div class="investor-name">锦秋基金</div>
+                            <div class="investor-type">投资方</div>
+                        </div>
+                        <div class="investor-card">
+                            <div class="investor-name">高瓴创投</div>
+                            <div class="investor-type">投资方</div>
+                        </div>
+                    </div>
+                    
+                    <h2>公司与技术</h2>
+                    
+                    <div class="product-card">
+                        <h3><i class="ri-flask-line"></i> AI材料科学</h3>
+                        <p>深度原理将人工智能技术与量子化学和商业需求相结合，通过AI算法加速材料化学创新过程。公司的技术可以显著提高新材料的研发效率和成功率，降低研发成本。</p>
+                    </div>
+                    
+                    <div class="product-card">
+                        <h3><i class="ri-atom-line"></i> 量子化学与AI结合</h3>
+                        <p>公司在量子化学计算基础上应用AI技术，实现对分子结构和性能的精准预测，为新材料设计提供理论指导和优化方案。</p>
+                    </div>
+                    
+                    <h2>市场前景</h2>
+                    
+                    <p>材料科学是科技创新的基础，也是制约许多高科技产业发展的瓶颈。传统材料研发周期长、成本高、效率低，而AI技术的引入有望彻底改变这一局面。</p>
+                    
+                    <p>深度原理通过AI技术加速材料研发创新，不仅可以缩短研发周期，降低成本，还能发现传统方法难以发现的新材料和新性能。这对于新能源、半导体、医药等依赖新材料的行业具有重要意义。</p>
+                    
+                    <p>分析师指出，AI+材料科学是一个新兴且极具潜力的领域，随着AI技术的不断进步和材料科学需求的增长，这一领域有望迎来快速发展。深度原理作为该领域的早期创业公司，有望在这一赛道上获得先发优势。</p>
+                </div>
+                
+                <div class="capital-source">
+                    <p>资料来源：公司公告、投资机构披露</p>
+                </div>
+                
+                <div class="industry-actions">
+                    <a href="capital_detail_3.html"><i class="ri-arrow-left-line"></i>上一篇</a>
+                    <a href="index.html#capital"><i class="ri-home-line"></i>返回列表</a>
+                    <a href="capital_detail_5.html">下一篇<i class="ri-arrow-right-line"></i></a>
+                </div>
+            </div>
+            
+            <div class="related-news">
+                <h2>相关动态</h2>
+                <div class="content-grid">
+                    <div class="related-card">
+                        <h3>AI在材料科学领域应用市场规模预计2030年达到50亿美元</h3>
+                        <a href="#" class="card-link">详情</a>
+                    </div>
+                    <div class="related-card">
+                        <h3>谷歌DeepMind推出材料科学AI模型，加速新材料发现</h3>
+                        <a href="#" class="card-link">详情</a>
+                    </div>
+                    <div class="related-card">
+                        <h3>AI助力新能源材料研发，多家企业布局相关技术</h3>
+                        <a href="#" class="card-link">详情</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>关于我们</h3>
+                    <p>华泰证券股份有限公司创建于1991年，是国内规模领先的综合性证券集团。公司致力于成为兼具本土优势和全球视野的一流综合金融集团。</p>
+                    <div class="social-links">
+                        <a href="#"><i class="ri-wechat-line"></i></a>
+                        <a href="#"><i class="ri-weibo-line"></i></a>
+                        <a href="#"><i class="ri-linkedin-box-line"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>研究团队</h3>
+                    <ul>
+                        <li><a href="#">研究团队介绍</a></li>
+                        <li><a href="#">分析师观点</a></li>
+                        <li><a href="#">研究方法论</a></li>
+                        <li><a href="#">联系分析师</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>快速链接</h3>
+                    <ul>
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="index.html#regulatory">监管政策</a></li>
+                        <li><a href="index.html#industry">行业动态</a></li>
+                        <li><a href="index.html#capital">资本市场</a></li>
+                        <li><a href="index.html#archive">历史周报</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>联系我们</h3>
+                    <ul>
+                        <li>客服热线: 95597</li>
+                        <li>邮箱: research@htsc.com</li>
+                        <li>地址: 江苏省南京市江东中路228号</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 华泰证券股份有限公司 版权所有</p>
+                <p>苏ICP备10204514号-1</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 

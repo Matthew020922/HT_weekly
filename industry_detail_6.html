@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>腾讯自研深度思考模型混元 T1 上线腾讯云 - 华泰证券AI行业周报</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <style>
+        .industry-detail {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .industry-header {
+            margin-bottom: 30px;
+            border-bottom: 1px solid var(--card-border);
+            padding-bottom: 20px;
+        }
+        
+        .industry-tag {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            background-color: var(--tag-domestic);
+            color: white;
+            margin-bottom: 15px;
+        }
+        
+        .industry-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--text-color);
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+        
+        .industry-meta {
+            display: flex;
+            align-items: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+        
+        .industry-meta > div {
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+        }
+        
+        .industry-meta i {
+            margin-right: 5px;
+        }
+        
+        .industry-content {
+            line-height: 1.8;
+            color: var(--text-color);
+            font-size: 1.05rem;
+        }
+        
+        .industry-content p {
+            margin-bottom: 20px;
+        }
+        
+        .industry-content h2 {
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--text-color);
+        }
+        
+        .industry-content h3 {
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--text-color);
+        }
+        
+        .industry-content ul, .industry-content ol {
+            margin-bottom: 20px;
+            padding-left: 20px;
+        }
+        
+        .industry-content li {
+            margin-bottom: 10px;
+        }
+        
+        .industry-content img {
+            max-width: 100%;
+            border-radius: var(--border-radius);
+            margin: 20px 0;
+        }
+        
+        .industry-content blockquote {
+            border-left: 4px solid var(--primary-color);
+            padding-left: 20px;
+            margin: 20px 0;
+            font-style: italic;
+            color: var(--text-secondary);
+        }
+        
+        .industry-footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--card-border);
+        }
+        
+        .industry-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .tag {
+            display: inline-block;
+            padding: 5px 12px;
+            background-color: var(--bg-lighter);
+            border-radius: 20px;
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .tag:hover {
+            background-color: var(--primary-color-light);
+            color: var(--primary-color);
+        }
+        
+        .navigation-links {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+        
+        .navigation-links a {
+            display: inline-flex;
+            align-items: center;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+        
+        .navigation-links a:hover {
+            color: var(--primary-color-dark);
+        }
+        
+        .navigation-links i {
+            font-size: 1.2rem;
+        }
+        
+        .related-articles {
+            margin-top: 50px;
+        }
+        
+        .related-articles h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .related-card {
+            background-color: var(--bg-lighter);
+            border-radius: var(--border-radius);
+            padding: 20px;
+            transition: all 0.3s;
+        }
+        
+        .related-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .related-card h4 {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: var(--text-color);
+        }
+        
+        .related-card .card-link {
+            display: inline-block;
+            margin-top: 10px;
+            color: var(--primary-color);
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s;
+            position: relative;
+        }
+        
+        .related-card .card-link::after {
+            content: '→';
+            margin-left: 5px;
+            transition: transform 0.3s;
+        }
+        
+        .related-card .card-link:hover::after {
+            transform: translateX(5px);
+        }
+        
+        @media (max-width: 768px) {
+            .industry-detail {
+                padding: 20px;
+                margin: 20px;
+            }
+            
+            .industry-title {
+                font-size: 1.7rem;
+            }
+            
+            .related-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page-wrapper">
+        <header class="site-header">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>华泰证券 AI行业周报</h1>
+                    <p class="tagline">洞察AI趋势 · 把握未来投资机遇</p>
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="index.html#regulatory">监管政策</a></li>
+                        <li><a href="index.html#industry" class="active">行业动态</a></li>
+                        <li><a href="index.html#capital">资本市场</a></li>
+                        <li><a href="index.html#insights">洞见报告</a></li>
+                        <li><a href="index.html#archive">历史周报</a></li>
+                    </ul>
+                </nav>
+                <div class="search-subscribe">
+                    <form class="search-form" role="search">
+                        <div class="search">
+                            <i class="ri-search-line" aria-hidden="true"></i>
+                            <input type="search" id="search-input" placeholder="搜索行业关键词..." autocomplete="off">
+                            <button type="submit" class="search-btn" aria-label="搜索"><i class="ri-arrow-right-line"></i></button>
+                        </div>
+                    </form>
+                    <button class="subscribe-btn">订阅周报</button>
+                </div>
+            </div>
+        </header>
+
+        <div class="industry-detail">
+            <div class="industry-header">
+                <div class="industry-tag domestic">国内</div>
+                <h1 class="industry-title">腾讯自研深度思考模型混元 T1 上线腾讯云</h1>
+                <div class="industry-meta">
+                    <div class="source"><i class="ri-links-line"></i> 腾讯云官方</div>
+                </div>
+            </div>
+            
+            <div class="industry-content">
+                <p>腾讯近日宣布推出自研深度思考模型混元 T1 正式版，并同步在腾讯云官网上线。混元 T1 正式版沿用了混元TurboS的创新架构，采用 Hybrid-Mamba-Transformer 融合模式。通过大规模强化学习，并结合数学、逻辑推理、科学和代码等理科难题的专项优化，混元 T1 与此前已上线腾讯元宝的混元 Tl-preview 模型相比综合效果明显提升。</p>
+                
+                <h2>混元 T1 的技术创新与优势</h2>
+                <p>混元 T1 正式版采用了创新的 Hybrid-Mamba-Transformer 融合架构，这一架构结合了 Mamba 模型的高效序列处理能力和 Transformer 模型的强大上下文理解能力，使模型在处理长文本和复杂推理任务时表现出色。</p>
+                
+                <p>腾讯云人工智能产品负责人表示："混元 T1 在数学、逻辑推理、科学和代码等理科难题上进行了专项优化，通过大规模强化学习技术，显著提升了模型的思考能力和问题解决能力。相比此前的混元 T1-preview 版本，新版本在综合性能上有明显提升。"</p>
+                
+                <h2>金融行业应用场景</h2>
+                <p>混元 T1 在金融领域展现出广泛的应用前景，特别是在以下几个方面：</p>
+                
+                <ul>
+                    <li>智能投顾：通过深度思考能力，为客户提供更精准的投资建议和资产配置方案</li>
+                    <li>风险评估：利用强大的逻辑推理能力，对金融产品和市场风险进行更全面的分析</li>
+                    <li>合规审查：协助金融机构进行文档审核和合规检查，提高工作效率</li>
+                    <li>客户服务：提供24/7的智能客服支持，解答专业金融问题</li>
+                </ul>
+                
+                <h2>技术规格与部署方式</h2>
+                <p>混元 T1 正式版提供了多种部署方式，以满足不同企业的需求：</p>
+                
+                <ul>
+                    <li>云端API服务：通过腾讯云API直接调用，无需本地部署</li>
+                    <li>私有化部署：支持在企业内部服务器或私有云环境中部署</li>
+                    <li>混合云方案：结合云端与本地部署的优势，兼顾性能与数据安全</li>
+                </ul>
+                
+                <p>腾讯云还提供了完整的开发工具包和技术文档，帮助企业快速集成混元 T1 到现有业务系统中。</p>
+                
+                <blockquote>
+                    混元 T1 的发布标志着腾讯在AI大模型领域的重要突破，也为金融科技创新提供了新的可能性。随着模型能力的不断提升和应用场景的拓展，我们有理由相信，混元 T1 将在金融行业数字化转型中发挥越来越重要的作用。
+                </blockquote>
+            </div>
+            
+            <div class="industry-footer">
+                <div class="industry-tags">
+                    <a href="#" class="tag">大模型</a>
+                    <a href="#" class="tag">腾讯云</a>
+                    <a href="#" class="tag">混元</a>
+                    <a href="#" class="tag">AI应用</a>
+                    <a href="#" class="tag">金融科技</a>
+                </div>
+                
+                <div class="navigation-links">
+                    <a href="industry_detail_5.html"><i class="ri-arrow-left-line"></i>上一篇</a>
+                    <a href="index.html#industry">返回列表</a>
+                </div>
+            </div>
+            
+            <div class="related-articles">
+                <h3>相关阅读</h3>
+                <div class="related-grid">
+                    <div class="related-card">
+                        <h4>华夏银行已部署DeepSeek大模型，主要应用于3大方面</h4>
+                        <p>华夏银行近日在投资者互动平台透露，其已部署DeepSeek大模型，并应用于多个方面...</p>
+                        <a href="industry_detail_1.html" class="card-link">阅读详情</a>
+                    </div>
+                    <div class="related-card">
+                        <h4>网商银行携手阿里云打造AI交互式风控，自证效率提升97%</h4>
+                        <p>网商银行携手阿里云"百炼"大模型平台、通义大模型，为小微客户打造基于AI的实时交互自证系统...</p>
+                        <a href="industry_detail_4.html" class="card-link">阅读详情</a>
+                    </div>
+                    <div class="related-card">
+                        <h4>中信金融资产运用AI技术赋能不良资产业务</h4>
+                        <p>中信金融资产自主研发的新业务核心系统顺利投产，DeepSeek-R1本地化部署进入全面安全评测及实施阶段...</p>
+                        <a href="industry_detail_5.html" class="card-link">阅读详情</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="site-footer">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>华泰证券 AI行业周报</h2>
+                    <p>洞察AI趋势 · 把握未来投资机遇</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>快速导航</h3>
+                        <ul>
+                            <li><a href="index.html">首页</a></li>
+                            <li><a href="index.html#regulatory">监管政策</a></li>
+                            <li><a href="index.html#industry">行业动态</a></li>
+                            <li><a href="index.html#capital">资本市场</a></li>
+                            <li><a href="index.html#insights">洞见报告</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>订阅服务</h3>
+                        <ul>
+                            <li><a href="#">邮件订阅</a></li>
+                            <li><a href="#">微信公众号</a></li>
+                            <li><a href="#">APP下载</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>关于我们</h3>
+                        <ul>
+                            <li><a href="#">研究团队</a></li>
+                            <li><a href="#">联系方式</a></li>
+                            <li><a href="#">免责声明</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-subscribe">
+                    <h3>订阅周报</h3>
+                    <p>第一时间获取AI行业最新动态</p>
+                    <form class="subscribe-form">
+                        <input type="email" placeholder="您的邮箱地址" required>
+                        <button type="submit">订阅</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 华泰证券股份有限公司 版权所有</p>
+                <p>本周报仅供参考，不构成任何投资建议</p>
+            </div>
+        </footer>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

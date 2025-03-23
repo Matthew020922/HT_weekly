@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>华夏银行已部署DeepSeek大模型，主要应用于3大方面 - 华泰证券AI行业周报</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <style>
+        .industry-detail {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .industry-header {
+            margin-bottom: 30px;
+            border-bottom: 1px solid var(--card-border);
+            padding-bottom: 20px;
+        }
+        
+        .industry-tag {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            background-color: var(--tag-domestic);
+            color: white;
+            margin-bottom: 15px;
+        }
+        
+        .industry-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--text-color);
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+        
+        .industry-meta {
+            display: flex;
+            align-items: center;
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 10px;
+        }
+        
+        .industry-meta .source {
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+        }
+        
+        .industry-meta i {
+            margin-right: 5px;
+        }
+        
+        .industry-content {
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+        
+        .industry-content p, .industry-content ul {
+            margin-bottom: 20px;
+        }
+        
+        .industry-content h2 {
+            font-size: 1.4rem;
+            margin: 30px 0 15px;
+            color: var(--primary-color);
+        }
+        
+        .industry-content h3 {
+            font-size: 1.2rem;
+            margin: 25px 0 15px;
+        }
+        
+        .industry-source {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--card-border);
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+        
+        .info-box {
+            background-color: var(--bg-lighter);
+            border-left: 4px solid var(--primary-color);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+        }
+        
+        .info-box h3 {
+            margin-top: 0;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+        
+        .application-card {
+            background-color: var(--bg-lighter);
+            border-radius: var(--border-radius);
+            padding: 20px;
+            margin-bottom: 20px;
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .application-card h3 {
+            display: flex;
+            align-items: center;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+        
+        .application-card h3 i {
+            margin-right: 10px;
+        }
+        
+        .application-card ul {
+            padding-left: 20px;
+        }
+        
+        .industry-actions {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid var(--card-border);
+        }
+        
+        .industry-actions a {
+            display: flex;
+            align-items: center;
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+        
+        .industry-actions a i {
+            margin: 0 5px;
+        }
+        
+        .related-news {
+            margin-top: 50px;
+        }
+        
+        .related-news h2 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: var(--text-color);
+        }
+        
+        .related-card {
+            padding: 20px;
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-sm);
+            margin-bottom: 15px;
+            transition: var(--transition);
+        }
+        
+        .related-card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+        }
+        
+        .related-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+        
+        .timeline {
+            position: relative;
+            margin: 40px 0;
+            padding-left: 40px;
+        }
+        
+        .timeline::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 10px;
+            width: 3px;
+            background: linear-gradient(to bottom, var(--primary-color), var(--primary-color-light));
+            border-radius: 3px;
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 30px;
+            transition: transform 0.3s ease;
+        }
+        
+        .timeline-item:hover {
+            transform: translateX(5px);
+        }
+        
+        .timeline-date {
+            position: absolute;
+            left: -40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 20px;
+            height: 20px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+            box-shadow: 0 0 0 4px rgba(var(--primary-color-rgb), 0.2);
+            z-index: 1;
+        }
+        
+        .timeline-date::before {
+            content: attr(data-date);
+            position: absolute;
+            left: -90px;
+            width: 80px;
+            text-align: right;
+            color: var(--primary-color);
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+        
+        .timeline-content {
+            padding: 20px;
+            background-color: var(--bg-lighter);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-sm);
+            border-left: 3px solid var(--primary-color);
+            transition: box-shadow 0.3s ease;
+        }
+        
+        .timeline-content:hover {
+            box-shadow: var(--shadow-md);
+        }
+        
+        .timeline-content h3 {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+        }
+        
+        .timeline-content h3::before {
+            content: "";
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .industry-detail {
+                padding: 20px;
+                margin: 20px;
+            }
+            
+            .industry-title {
+                font-size: 1.7rem;
+            }
+            
+            .timeline {
+                padding-left: 30px;
+            }
+            
+            .timeline-date {
+                left: -30px;
+            }
+            
+            .timeline-date::before {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <div class="logo">
+                    <h1>华泰证券 AI行业周报</h1>
+                    <p class="tagline">洞察AI趋势 · 把握未来投资机遇</p>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="index.html#regulatory">监管政策</a></li>
+                        <li><a href="index.html#industry" class="active">行业动态</a></li>
+                        <li><a href="index.html#capital">资本市场</a></li>
+                        <li><a href="index.html#insights">洞见报告</a></li>
+                        <li><a href="index.html#ai-assistant">问一问</a></li>
+                        <li><a href="index.html#archive">历史周报</a></li>
+                    </ul>
+                </nav>
+                <div class="search-subscribe">
+                    <div class="search">
+                        <i class="ri-search-line"></i>
+                        <input type="text" placeholder="搜索行业关键词...">
+                    </div>
+                    <button class="subscribe-btn">订阅周报</button>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="industry-detail">
+                <div class="industry-header">
+                    <div class="industry-tag">国内</div>
+                    <h1 class="industry-title">华夏银行已部署DeepSeek大模型，主要应用于3大方面</h1>
+                    <div class="industry-meta">
+                        <span class="source"><i class="ri-links-line"></i> 移动支付网</span>
+                        <span class="industry-category"><i class="ri-bank-line"></i> 金融科技</span>
+                    </div>
+                </div>
+                
+                <div class="industry-content">
+                    <p>华夏银行近日在投资者互动平台透露，其已部署DeepSeek大模型，并应用于多个方面。</p>
+                    
+                    <p>其已在行内部署了DeepSeek大模型，主要应用于以下方面：</p>
+                    
+                    <div class="application-card">
+                        <h3><i class="ri-team-line"></i> 提升办公效能</h3>
+                        <p>为全体员工提供智能问答、辅助报告生成、邮箱助手等大模型基础服务，提升办公效能。</p>
+                    </div>
+                    
+                    <div class="application-card">
+                        <h3><i class="ri-customer-service-2-line"></i> 营销分析与合规质检</h3>
+                        <p>实现了外呼客户购买意向分析和客服消保合规质检功能，提升营销精准度和合规管理时效性。</p>
+                    </div>
+                    
+                    <div class="application-card">
+                        <h3><i class="ri-shape-line"></i> 场景应用探索</h3>
+                        <p>正在积极开展智能风控、智能问数、智能客服等场景的应用探索。</p>
+                    </div>
+                    
+                    <h2>投入与收益</h2>
+                    <p>该行接入DeepSeek的成本，主要包括智能算力投入、AI人才储备、系统集成改造等；其收益主要体现在银行经营管理的降本、提质、增效、拓市场、防风险、保合规等方面，为数字化转型、智能化发展提供技术支撑。</p>
+                    
+                    <h2>大模型研发历程</h2>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-date" data-date="2023年上半年"></div>
+                            <div class="timeline-content">
+                                <h3><i class="ri-flask-line"></i> 开展前沿技术研究</h3>
+                                <p>2023年半年报显示，华夏银行开展元宇宙、大语言模型等前沿技术研究与验证，加快推进新技术成果转化应用。</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date" data-date="2023年全年"></div>
+                            <div class="timeline-content">
+                                <h3>推进大模型应用</h3>
+                                <p>2023年报显示，推进大模型等新技术应用；在数字化生态经营上，已在大模型等场景和伙伴形成共建。</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date" data-date="2024年上半年"></div>
+                            <div class="timeline-content">
+                                <h3>未提及大模型相关内容</h3>
+                                <p>在2024半年报中，华夏银行未提及大模型相关内容。</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date" data-date="2024年11月"></div>
+                            <div class="timeline-content">
+                                <h3>与北京理工大学开展技术研讨</h3>
+                                <p>华夏银行与北京理工大学对未来合作进行展望：一方面，探索将量子概率论引入经典判别式AI模型和经典NLP模型；另一方面，探索构建大模型评估指标体系。双方将推进在量子科技和大模型领域的研究合作，以科技推动银行业务创新。</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date" data-date="近期"></div>
+                            <div class="timeline-content">
+                                <h3>部署DeepSeek大模型</h3>
+                                <p>华夏银行在投资者互动平台透露已部署DeepSeek大模型，并应用于多个方面。</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h2>行业背景</h2>
+                    <p>据《银行科技研究社》不完全统计，目前至少已有30余家银行部署了DeepSeek大模型。华夏银行此前较少透露在大模型研发应用方面的情况，而DeepSeek大模型的引入，有望进一步加快该行的数智化升级进程。</p>
+                </div>
+                
+                <div class="industry-source">
+                    <p>资料来源：移动支付网、华夏银行投资者互动平台、《银行科技研究社》</p>
+                </div>
+                
+                <div class="industry-actions">
+                    <a href="#"><i class="ri-arrow-left-line"></i>上一篇</a>
+                    <a href="#">下一篇<i class="ri-arrow-right-line"></i></a>
+                </div>
+            </div>
+            
+            <div class="related-news">
+                <h2>相关动态</h2>
+                <div class="content-grid">
+                    <div class="related-card">
+                        <h3>OpenAI推出GPT-4，多模态能力引关注</h3>
+                        <a href="#" class="card-link">详情</a>
+                    </div>
+                    <div class="related-card">
+                        <h3>任正非谈AI发展：未来在大模型上会风起云涌</h3>
+                        <a href="#" class="card-link">详情</a>
+                    </div>
+                    <div class="related-card">
+                        <h3>微软扩大对OpenAI投资，整合GPT到产品线</h3>
+                        <a href="#" class="card-link">详情</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>关于我们</h3>
+                    <p>华泰证券股份有限公司创建于1991年，是国内规模领先的综合性证券集团。公司致力于成为兼具本土优势和全球视野的一流综合金融集团。</p>
+                    <div class="social-links">
+                        <a href="#"><i class="ri-wechat-line"></i></a>
+                        <a href="#"><i class="ri-weibo-line"></i></a>
+                        <a href="#"><i class="ri-linkedin-box-line"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>研究团队</h3>
+                    <ul>
+                        <li><a href="#">研究团队介绍</a></li>
+                        <li><a href="#">分析师观点</a></li>
+                        <li><a href="#">研究方法论</a></li>
+                        <li><a href="#">联系分析师</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>快速链接</h3>
+                    <ul>
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="index.html#regulatory">监管政策</a></li>
+                        <li><a href="index.html#industry">行业动态</a></li>
+                        <li><a href="index.html#capital">资本市场</a></li>
+                        <li><a href="index.html#archive">历史周报</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>联系我们</h3>
+                    <ul>
+                        <li>客服热线: 95597</li>
+                        <li>邮箱: research@htsc.com</li>
+                        <li>地址: 江苏省南京市江东中路228号</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 华泰证券股份有限公司 版权所有</p>
+                <p>苏ICP备10204514号-1</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
